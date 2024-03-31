@@ -1,0 +1,28 @@
+/* Navigation bar style */
+.navbar {
+    background-color: #e80476; /* Pink */
+}
+
+.navbar-brand {
+    color: #aabc37; /* White */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White */
+}
+
+/* Weather condition background images */
+#background {
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Weather animation slide styles */
+#weatherSlide {
+    width: 400px;
+    margin: 0 auto;
+}

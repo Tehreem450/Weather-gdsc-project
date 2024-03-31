@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+        <a class="navbar-brand" href="#">GFD Weather</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">WeatherNow</h1>
+        <div id="weatherSlide" class="carousel slide mb-4" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/sunny.jpg" class="d-block w-100" alt="Sunny">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/cloudy.png" class="d-block w-100" alt="Cloudy">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/rainy.jpg" class="d-block w-100" alt="Rainy">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/thunderstorm.jpg" class="d-block w-100" alt="Thunderstorm">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/snowy.jpg" class="d-block w-100" alt="Snowy">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#weatherSlide" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#weatherSlide" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div id="countriesWeather" class="row justify-content-center mb-4"></div>
+
+        <input type="text" id="locationInput" class="form-control mb-3" placeholder="Enter location (city, zip code, country)">
+        <button class="btn btn-primary btn-block mb-3" onclick="fetchWeather()">Get Weather</button>
+        <div id="weatherInfo" class="mb-3"></div>
+        <div id="background"></div>
+        <div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display: none;">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div id="errorMessage" class="text-danger"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
