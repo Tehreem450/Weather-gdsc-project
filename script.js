@@ -78,6 +78,30 @@ function displayWeather(data) {
     `;
 }
 
+// Function to set background based on weather condition
+function setBackground(weatherCondition) {
+    const backgroundElement = document.getElementById('background');
+    switch (weatherCondition.toLowerCase()) {
+        case 'clear':
+            backgroundElement.style.backgroundImage = 'url("images/sunny.jpg")';
+            break;
+        case 'clouds':
+            backgroundElement.style.backgroundImage = 'url("images/cloudy.png")';
+            break;
+        case 'rain':
+            backgroundElement.style.backgroundImage = 'url("images/rainy.jpg")';
+            break;
+        case 'thunderstorm':
+            backgroundElement.style.backgroundImage = 'url("images/thunderstorm.jpg")';
+            break;
+        case 'snow':
+            backgroundElement.style.backgroundImage = 'url("images/snowy.jpg")';
+            break;
+        default:
+            backgroundElement.style.backgroundImage = 'url("images/default.jpg")';
+    }
+}
+
 // Add event listener for Enter key press
 document.getElementById('locationInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
